@@ -1,0 +1,47 @@
+GET http://localhost:5050/
+
+###
+GET http://localhost:5050/postings
+
+###
+GET http://localhost:5050/postings/1
+
+###
+POST http://localhost:5050/postings
+Content-Type: application/json
+
+{
+  "from": "Olena",
+  "to": "Petro",
+  "content": "Notebook",
+  "deliveryType": 1,
+  "weight": 1,
+  "width": 20,
+  "height": 15,
+  "depth": 5,
+  "value": 300,
+  "price": 40
+}
+
+###
+PUT http://localhost:5050/postings/1
+Content-Type: application/json
+
+{
+  "from": "Alice",
+  "to": "Bob",
+  "content": "New books",
+  "deliveryType": 2,
+  "weight": 3,
+  "width": 35,
+  "height": 25,
+  "depth": 15,
+  "value": 100,
+  "price": 30
+}
+
+###
+DELETE http://localhost:5050/postings/2
+
+###
+GET http://localhost:5050/postings/999
